@@ -30,7 +30,12 @@ function checkForWin (winningCombination, playerSelection){
 }
         
     
-
+function Tie(playerSelection){
+    if (playerSelection.length >= 5){
+        alert ('No Winner')
+        console.log ('No')
+    }
+}
 
 
     
@@ -49,7 +54,7 @@ for (let elementIndex = 0; elementIndex < cellElementArray.length; elementIndex 
     const currentCellElement = cellElementArray[elementIndex]
     
   
-    currentCellElement.addEventListener('click', function (event) {
+    currentCellElement.addEventListener('click', function  game(event) {
      
        
         const clickedCellElement = event.target;
@@ -63,10 +68,13 @@ for (let elementIndex = 0; elementIndex < cellElementArray.length; elementIndex 
             clickedCellElement.innerHTML = 'X'
             playerXSelections.push(clickedCellElement.id)
             if (checkForWin (winningCombinations, playerXSelections) == true)
-            { alert ('Player X Wins!!!')}
+            { alert ('Player X Wins!!!')
+         
+           
+        currentCellElement.removeEventListener('click', game)
             console.log(playerXSelections)
             
-            
+            Tie(playerXSelections)}
             
                 
             
@@ -77,9 +85,11 @@ for (let elementIndex = 0; elementIndex < cellElementArray.length; elementIndex 
               currentPlayer = 'X'
               clickedCellElement.innerHTML = 'O'
               playerOSelections.push(clickedCellElement.id)
-              if (checkForWin (winningCombinations, playerOSelections ) == true){ alert ('Player O Wins!!!')}
+              if (checkForWin (winningCombinations, playerOSelections ) == true){ alert ('Player O Wins!!!')
+            
+             currentCellElement.removeEventListener('click', game)}
               console.log(playerOSelections)
-              
+              Tie(playerOSelections)
 
             }
 
@@ -90,13 +100,4 @@ for (let elementIndex = 0; elementIndex < cellElementArray.length; elementIndex 
 
     )
     }
-   
-
-                
-
-            
-        
-    
- 
-    
-   
+          

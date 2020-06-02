@@ -3,23 +3,27 @@
 }
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-
+    align-items: center;
+    background-image: url(https://4.bp.blogspot.com/_Oc4F7PTrS4g/TGRQy3B6edI/AAAAAAAAAI0/tuaARUlSr_k/s1600/4+-+Mountain+Landscape.jpg);
+font-size: 45px;
 }
 main {
     display: flex;
     flex-wrap: wrap;
     width: 300px;
     height: 300px;
-    border: 2px solid green;
+    border: 2px solid black;
     padding: 1px;
     font-size: 65px;
     text-align: center;
+    
 }
 .grid-cell {
     width: 96px;
     height: 96px;
-    border: 1px solid blue;
+    border: 1px solid black;
     margin: 1px;
 }
 .grid-cell:hover {
