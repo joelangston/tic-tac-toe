@@ -69,14 +69,14 @@ for (let elementIndex = 0; elementIndex < cellElementArray.length; elementIndex 
             playerXSelections.push(clickedCellElement.id)
             if (checkForWin (winningCombinations, playerXSelections) == true)
             { alert ('Player X Wins!!!')
-         
            
-        currentCellElement.removeEventListener('click', game)
+           
+       
+            }
+            
+            currentCellElement.removeEventListener('click', game)
             console.log(playerXSelections)
-            
-            Tie(playerXSelections)}
-            
-                
+            Tie(playerXSelections) 
             
            
         }
@@ -87,11 +87,12 @@ for (let elementIndex = 0; elementIndex < cellElementArray.length; elementIndex 
               playerOSelections.push(clickedCellElement.id)
               if (checkForWin (winningCombinations, playerOSelections ) == true){ alert ('Player O Wins!!!')
             
-             currentCellElement.removeEventListener('click', game)}
-              console.log(playerOSelections)
-              Tie(playerOSelections)
+            
 
             }
+            currentCellElement.removeEventListener('click', game)}
+            console.log(playerOSelections)
+            Tie(playerOSelections)
 
         }
 
